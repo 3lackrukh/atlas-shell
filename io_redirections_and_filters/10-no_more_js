@@ -1,2 +1,2 @@
 #!/bin/bash
-find -R ! -directory *.js | -delete 
+find . -name *.js -not type d -delete 
