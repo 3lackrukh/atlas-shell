@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# this script lists numbers from 1 to 100. In the case that a number is a multiple of 3, 'Fizz' will print instead. In the case it is a multiple of 5, 'Buzz' will display instead. In the case the number is a multiple of 3 and 5, 'FizzBuzz' will display instead.
+for ((i=1; i<=100; i++)); do
+    if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ]; then
+        echo "FizzBuzz"
+	elif [ $((i % 3)) -eq 0 ]; then
+        echo "Fizz"
+    elif [ $((i % 5)) -eq 0 ]; then
+        echo "Buzz"
+    else
+	echo "$i"
+    fi
+done
+
